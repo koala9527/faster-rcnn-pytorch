@@ -25,6 +25,7 @@ class mAP_FRCNN(FRCNN):
         self.confidence = 0.05
         f = open("./input/detection-results/"+image_id+".txt","w") 
         image_shape = np.array(np.shape(image)[0:2])
+        old_image = image
         old_width = image_shape[1]
         old_height = image_shape[0]
         width,height = get_new_img_size(old_width,old_height)
